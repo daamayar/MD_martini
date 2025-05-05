@@ -46,7 +46,8 @@ RUN pip install notebook ipykernel && \
 RUN mamba create --name cg2all pip cudatoolkit=11.3 dgl=1.0 -c dglteam/label/cu113 -y && \
     /bin/bash -c "source /root/mambaforge/etc/profile.d/conda.sh && \
     conda activate cg2all && \
-    pip install git+http://github.com/huhlim/cg2all"
+    pip install git+http://github.com/huhlim/cg2all && mamba install MDAnalysis==2.4.2 && \
+    mamba install -c conda-forge ambertools && mamba install py3Dmol"
 
 # Create Jupyter config directory and configuration
 RUN mkdir -p /root/.jupyter && \
