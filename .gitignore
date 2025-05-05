@@ -1,5 +1,6 @@
 martini/
 AKP6_WT/
-authoriwed_keys
+authorized_keys
 .git/
 *pdb
+*~
